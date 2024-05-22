@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz End</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
+
+.end-container {
+    text-align: center;
+    background-color: #e0f7ff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 36px;
+    color: #0073e6;
+}
+
+p {
+    font-size: 24px;
+    color: #0073e6;
+}
+
+h2 {
+    font-size: 48px;
+    color: #0073e6;
+    margin: 10px 0;
+}
+
+.end-buttons {
+    margin-top: 20px;
+}
+
+button {
+    display: block;
+    width: 150px;
+    margin: 10px auto;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #0073e6;
+    background-color: white;
+    border: 2px solid #0073e6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #0073e6;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="end-container">
+        <h1>Quiz Completed!</h1>
+        <p>Your Score:</p>
+        <h2 id="finalScore">0</h2>
+        <div class="end-buttons">
+            <button id="restartBtn">Restart</button>
+            <button id="homeBtn">Home</button>
+        </div>
+    </div>
+    <script>
+        const score = localStorage.getItem('mostRecentScore') || 0;
+        document.getElementById('finalScore').textContent = score;
+        document.getElementById('restartBtn').addEventListener('click', function() {
+            window.location.href = 'quiz.html';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

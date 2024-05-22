@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6f0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    text-align: center;
+    
+    
+}
+
+.quiz-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    background-color: white;
+    color: #4a90e2;
+    cursor: pointer;
+    height: 40px;
+    width: 160px;
+}
+
+.hud {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.hud-item {
+    text-align: center;
+}
+
+.hud-prefix {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #888;
+}
+
+.hud-main-text {
+    font-size: 24px;
+    color: #4a90e2;
+}
+
+#question {
+    color: black;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.choice-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.choice-container:hover {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.choice-prefix {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    margin-right: 10px;
+}
+
+.choice-text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.choice-container.correct {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.choice-container.incorrect {
+    background-color: #F44336;
+    color: white;
+}
+/* Progress Bar Styling */
+#progressBarContainer {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+#progressBar {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+    width: 0;
+}
+
